@@ -13,6 +13,20 @@ Crear una imagen de docker con roles ansible que sirve como template para otras 
 Al usar ansible se pueden modificar las contraseñas importantes y las configuraciones.
 Solo debe tenerse cuidado en los contenedores si se cambian los puertos.
 
+### Imagenes Docker Hub
+
+Este template se construye a partir de cuatro imagenes docker:
+- [saengate/postgres](https://hub.docker.com/repository/docker/saengate/postgres)
+- [saengate/neo4j](https://hub.docker.com/repository/docker/saengate/neo4j)
+- [saengate/vue](https://hub.docker.com/repository/docker/saengate/vue)
+- [saengate/django](https://hub.docker.com/repository/docker/saengate/django)
+
+Cada uno apunta a un repositorio Git Hub:
+- [postgres](https://github.com/saengate/postgres)
+- [neo4j](https://github.com/saengate/neo4j)
+- [vue](https://github.com/saengate/vue)
+- [django](https://github.com/saengate/django)
+
 ### Dependencias
 
 * [Docker](https://docs.docker.com/engine/install/)
