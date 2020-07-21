@@ -1,4 +1,5 @@
 # Byte-compiled / optimized / DLL files
+# Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
 *$py.class
@@ -111,7 +112,7 @@ venv.bak/
 .DS_Store
 
 data/
-project/poetry.lock
+django/poetry.lock
 
 local-persist.json
 
