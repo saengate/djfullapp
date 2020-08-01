@@ -158,6 +158,10 @@ docker run -d --rm \
 
 [django-easy-audit](https://github.com/soynatan/django-easy-audit) Es una aplicación de auditoria de fácil uso que he incluido en este projecto. De momento, estará en evaluación y si cumple con las espectativas se volverá parte del proyecto. Todas las instrucciones de uso se encuentran en la descripción de dicho proyecto (Realmente parece que no requiere de ninguna interacción en los modelos, así que al ser prácticamente innecesaria la interacción del desarrollador para su ejecución se evita que por olvido no se monitoree algún modelo, simplemente genial).
 
+#### Error
+
+Esta libreria actualmente contiene un error que impide la ejecución de `./manage.py runserver` por lo que hay que deshabilitarla en el settings junto al MIDDLEWARE para evitar el error cuando se desea usar esta funcionalidad o el debug mode.
+
 
 ## Desarrollo
 
@@ -209,6 +213,10 @@ Se agrega el comando "cmd" para facilitar el uso del proyecto y su interacción 
 -sn  | --shell_neo4j        accede al contenedor de Neo4j               (docker exec -it)
 
 -s   | --stop               detiene los contenedores                    (docker-compose down)
+
+
+-lp  | --local_persist      Para desarrollo inicia un contenedor docker (docker run local-persist)
+                            con local persistencia
 ```
 
 ### Librerias (pip requirements.txt y poetry)
