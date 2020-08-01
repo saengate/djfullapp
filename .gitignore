@@ -107,7 +107,6 @@ venv.bak/
 *.csv
 /.gitignore~
 /README.md~
-.vscode/
 .idea/
 .DS_Store
 

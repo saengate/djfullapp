@@ -1,0 +1,10 @@
+{
+    "terminal.explorerKind": "external",
+    "python.linting.enabled": true,
+    "python.linting.pylintArgs": [
+        "--enable=W0614"
+    ],
+    "python.linting.flake8Args": [
+        "--max-line-length=100",
+    ],
+}

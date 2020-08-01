@@ -12,8 +12,8 @@ services:
     container_name: djfullapp-db
     restart: always
     tty: true
-#    volumes:
-#      - postgres:/var/lib/postgresql/11/main  # base de datos persistente
+#     - postgres:/var/lib/postgresql/11/main  # usar cuando se inicia por primera vez
+#   # - ./data/postgres:/var/lib/postgresql/11/main  # usar cuando una vez creado el contenedor
     ports:
       - 5432:5432
       - 24:22
@@ -67,13 +67,14 @@ services:
       - db
       - neo4j
       - vue
-#    volumes:
-#      - ./django:/webapps/django
+    volumes:
+      - ./django:/webapps/django
 #      - ./django/ansible:/tmp/ansible
     ports:
       - 7000:80
       - 7001:8080
       - 7002:5555
+      - 7003:7000  # ./manage.py runserver
       - 23:22
     environment:
       - NGINX_HOST=localhost
